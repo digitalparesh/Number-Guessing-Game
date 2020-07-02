@@ -1,0 +1,21 @@
+.container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  background: #fff;
+  padding: 1rem;
+  width: 50%;
+  box-shadow: 1px 2px 20px 5px #f2f2f2;
+  margin: 1rem auto;
+}
+p {
+  line-height: 1.5;
+}
+.red {
+  background: red;
+  color: #fff;
+  width: 80%;
+}
+.green {
+  background: green;
+  color: #fff;
+}
