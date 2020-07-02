@@ -1,12 +1,15 @@
+/* git edited 
+branch
+*/
 let arr = [];
-// guess number
+// Generate random number
 let randomNumber;
 function random() {
   randomNumber = Math.floor(Math.random() * 100) + 1;
   console.log(randomNumber);
 }
 random();
-// count button click
+// count button click. count user turn.
 let button = document.getElementById('submit');
 let count = 0;
 function clickCount() {
