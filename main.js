@@ -1,21 +1,24 @@
 /* git edited 
 branch
 */
+
 let arr = [];
-// Generate random number
 let randomNumber;
+let button = document.getElementById('submit');
+let count = 0;
+let newBtn = document.getElementById('new');
+let input = document.getElementById('num');
+
+// Generate random number
 function random() {
   randomNumber = Math.floor(Math.random() * 100) + 1;
   console.log(randomNumber);
 }
 random();
 // count button click. count user turn.
-let button = document.getElementById('submit');
-let count = 0;
 function clickCount() {
   count += 1;
 }
-let newBtn = document.getElementById('new');
 newBtn.style.display = 'none';
 
 // click event on submit button
@@ -40,6 +43,7 @@ document.getElementById('submit').addEventListener('click', function () {
       colorMsg.classList.remove('red');
       colorMsg.classList.add('green');
       colorMsg.textContent = 'Congratulations, You got it right..';
+      input.disabled = true;
       msg.style.display = 'none';
       newGame();
     } else {
@@ -61,7 +65,8 @@ document.getElementById('submit').addEventListener('click', function () {
     }
   } else {
     // game over start  the new game
-    colorMsg.textContent = 'Game Over! You finished your 10 times turn.'
+    colorMsg.textContent = 'Game Over! You finished your 10 times turn.';
+    input.disabled = true;
     newGame();
   }
   clearForm();
@@ -75,6 +80,7 @@ newBtn.addEventListener('click', function () {
   preGuess.style.display = 'none';
   colorMsg.style.display = 'none';
   newBtn.style.display = 'none';
+  input.disabled = false;
 })
 
 function newGame() {
@@ -82,6 +88,5 @@ function newGame() {
   newBtn.style.display = 'block';
 }
 function clearForm() {
-  let input = document.getElementById('num');
   input.value = '';
 }
